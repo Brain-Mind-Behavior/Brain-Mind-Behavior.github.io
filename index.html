@@ -5,55 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#x1F379;zamongsoda</title>
     <style>
-        body {
-         font-family: 'Noto Sans KR', sans-serif;
-         margin: 0;
-         padding: 0;
-         background-color: #fafafa;
-         }
-        .container {
-         max-width: 960px;
-         margin: 0 auto;
-         padding: 20px;
+        .container{
+            display: grid;
+            grid-template-areas:
+                'header header'
+                'nav content';
+            grid-template-rows: 50px 1fr;
+            grid-template-columns: 1fr 5fr;
+            background-color: #FAF6E5;}
+        .header{
+            grid-area: header;
         }
-        header {
-         background-color: #f8f9fa;
-         height: 60px;
-         line-height: 60px;
-         padding-left: 20px;
+        .nav{
+            grid-area: nav;
         }
-        header h1 {
-         margin: 0;
-         font-size: 24px;
+        .content{
+            grid-area: content;
         }
-        section {
-         margin-top: 20px;
-        }
-        section h2 {
-         font-size: 20px;
-        }
-        section p {
-         line-height: 1.6;
-        }
-        @media screen and (max-width: 768px) {
-        header h1 {
-            font-size: 20px;
-        }
-        section h2 {
-            font-size: 18px;
-        }
-        }
-</style>
+    </style>
 </head>
 <body>
 <div class="container">
-    <header>
-        <h1>zamongsoda</h1>
-    </header>
-    <section>
-        <h2>introduction</h2>
-        <p>introduction page</p>
-    </section>
+    <div id="header">header</div>
+    <div id="nav">nav</div>
+    <div id="content">content</div>
 </div>
 </body>
 </html>
